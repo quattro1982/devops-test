@@ -1,7 +1,0 @@
-## Assuming no changes to file timestamps, We can add the following GNU find commands to crontab to be run every night
-30 01 * * * <commands>
-
-# Commands
-find /var/log/backend.log* -type f -mtime +3 -exec rm -f {} \;
-find /var/log/application.log* -type f -mtime +3 -exec rm -f {} \;
-find /var/log/monitoring-* -type f -mtime +3 -exec rm -f {} \;

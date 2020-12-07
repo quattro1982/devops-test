@@ -12,8 +12,8 @@ recipient=$2
 
 echo "Log file is $logfile"
 
-# Assume Apache logs are in standard format, we just use cut to split the logline with whitespace as separator and get the 9th column,
-# which contains the Response codes
+# Assume Apache logs are in standard format, we just use cut to split the logline with whitespace as separator and get the 9th column
+# which contains the HTTP Response codes
 if [ -f $logfile ]; then
   error_count=`cat $logfile | cut -d ' ' -f 9 | egrep "^4.*|^5.*" | wc -l`
 else

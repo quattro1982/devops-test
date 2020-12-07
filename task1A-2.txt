@@ -1,4 +1,0 @@
-Use crontab with the following entry
-
-## Crontab that runs at 0130 System time every day
-30 01 * * * bash http_error.sh <log filename> <recipient email address>
